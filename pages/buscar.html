@@ -3,8 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Búsqueda de información</title>
- 
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <link rel="icon" href="../img/mundito.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -15,181 +19,152 @@
 
 <body>
 
-    <header>
+    <header class="bg-dark text-white py-4 text-center">
         <h1>Búsqueda de información</h1>
-        <p>Esta página recibe datos enviados desde los formularios usando el método GET.</p>
+        <p class="mb-0">Esta página recibe datos enviados desde los formularios usando el método GET.</p>
     </header>
 
-    <nav>
-        <a href="../index.html">
-            <i class="fa-solid fa-house"></i>
-            Inicio
-        </a>
-
-        <a href="buscar.html">Buscar</a>
-
-        <a href="cto/contacto.html">
-            <i class="fa-solid fa-envelope"></i>
-            Contacto
-        </a>
+    <nav class="navbar navbar-expand-lg bg-warning">
+        <div class="container-fluid justify-content-center">
+            <ul class="nav">
+                <li class="nav-item"><a class="nav-link btn btn-light m-1 rounded-pill" href="../index.html"><i class="fa-solid fa-house"></i> Inicio</a></li>
+                <li class="nav-item"><a class="nav-link btn btn-light m-1 rounded-pill" href="buscar.html">Buscar</a></li>
+                <li class="nav-item"><a class="nav-link btn btn-light m-1 rounded-pill" href="cto/contacto.html"><i class="fa-solid fa-envelope"></i> Contacto</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <main>
+    <main class="container my-4">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <section class="card mb-4">
+                    <div class="card-body">
+                        <h2>¿Qué ocurre en esta página?</h2>
+                        <p>Cuando un formulario usa el método <code class="bg-light p-1 rounded">GET</code>, los datos enviados aparecen en la barra de direcciones del navegador.</p>
+                        <p>Por ejemplo, si se escribe un tema y un correo, la URL puede verse de esta forma:</p>
+                        <pre class="bg-dark text-black p-3 rounded"><code>buscar.html?tema=html&correo=estudiante@ejemplo.com</code></pre>
+                        <p>En esta etapa se está practicando solo HTML. Más adelante, con JavaScript o con un lenguaje de servidor, esos datos podrán leerse y procesarse.</p>
+                    </div>
+                </section>
 
-        <section>
-            <h2>¿Qué ocurre en esta página?</h2>
+                <section class="card mb-4">
+                    <div class="card-body">
+                        <h2>Formulario de búsqueda local</h2>
+                        <form method="GET" action="buscar.html">
+                            <div class="mb-3">
+                                <label for="tema" class="form-label">Tema de búsqueda:</label>
+                                <input type="text" id="tema" name="tema" class="form-control" placeholder="Ejemplo: HTML" required minlength="3" maxlength="20">
+                            </div>
 
-            <p>
-                Cuando un formulario usa el método <code>GET</code>, los datos enviados aparecen
-                en la barra de direcciones del navegador.
-            </p>
+                            <div class="mb-3">
+                                <label for="categoria" class="form-label">Categoría:</label>
+                                <select id="categoria" name="categoria" class="form-select" required>
+                                    <option value="">Seleccione una categoría</option>
+                                    <option value="estructura">Estructura HTML</option>
+                                    <option value="formularios">Formularios</option>
+                                    <option value="multimedia">Multimedia</option>
+                                    <option value="tablas">Tablas</option>
+                                </select>
+                            </div>
 
-            <p>
-                Por ejemplo, si se escribe un tema y un correo, la URL puede verse de esta forma:
-            </p>
+                            <p>Seleccione recursos relacionados:</p>
+                            <div class="mb-3">
+                                <div class="form-check">
+                                    <input type="checkbox" name="recursos[]" value="apuntes" class="form-check-input" id="apuntes">
+                                    <label class="form-check-label" for="apuntes">Apuntes</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="checkbox" name="recursos[]" value="videos" class="form-check-input" id="videos">
+                                    <label class="form-check-label" for="videos">Videos</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="checkbox" name="recursos[]" value="ejercicios" class="form-check-input" id="ejercicios">
+                                    <label class="form-check-label" for="ejercicios">Ejercicios</label>
+                                </div>
+                            </div>
 
-            <pre>
-buscar.html?tema=html&correo=estudiante@ejemplo.com
-            </pre>
+                            <button type="submit" class="btn btn-primary"><i class="fa-solid fa-magnifying-glass"></i> Buscar</button>
+                        </form>
+                    </div>
+                </section>
 
-            <p>
-                En esta etapa se está practicando solo HTML. Más adelante, con JavaScript o con
-                un lenguaje de servidor, esos datos podrán leerse y procesarse.
-            </p>
-        </section>
+                <section class="card mb-4">
+                    <div class="card-body">
+                        <h2>Temas revisados</h2>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped">
+                                <caption class="fw-bold">Resumen de contenidos practicados</caption>
+                                <thead class="table-success">
+                                    <tr>
+                                        <th>Tema</th>
+                                        <th>Etiqueta relacionada</th>
+                                        <th>Uso</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>Encabezados</td><td><code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code></td><td>Organizar títulos y subtítulos.</td></tr>
+                                    <tr><td>Párrafos</td><td><code>&lt;p&gt;</code></td><td>Escribir bloques de texto.</td></tr>
+                                    <tr><td>Enlaces</td><td><code>&lt;a&gt;</code></td><td>Conectar páginas internas o externas.</td></tr>
+                                    <tr><td>Formularios</td><td><code>&lt;form&gt;</code></td><td>Enviar datos ingresados por el usuario.</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
 
-        <section>
-            <h2>Formulario de búsqueda local</h2>
+                <section class="card mb-4">
+                    <div class="card-body">
+                        <h2>Avance de práctica</h2>
+                        <div class="mb-2">
+                            <p>HTML semántico:</p>
+                            <progress value="90" max="100" class="w-100"></progress>
+                            <span>90%</span>
+                        </div>
+                        <div class="mb-2">
+                            <p>Formularios:</p>
+                            <progress value="75" max="100" class="w-100"></progress>
+                            <span>75%</span>
+                        </div>
+                        <div>
+                            <p>Preparación para CSS:</p>
+                            <meter value="5" min="0" max="10" class="w-100"></meter>
+                        </div>
+                    </div>
+                </section>
 
-            <form method="GET" action="buscar.html">
-
-                <label for="tema">Tema de búsqueda:</label>
-                <input type="text" id="tema" name="tema" placeholder="Ejemplo: HTML" required minlength="3"
-                    maxlength="20">
-
-                <br><br>
-
-                <label for="categoria">Categoría:</label>
-                <select id="categoria" name="categoria" required>
-                    <option value="">Seleccione una categoría</option>
-                    <option value="estructura">Estructura HTML</option>
-                    <option value="formularios">Formularios</option>
-                    <option value="multimedia">Multimedia</option>
-                    <option value="tablas">Tablas</option>
-                </select>
-
-                <br><br>
-
-                <p>Seleccione recursos relacionados:</p>
-
-                <label>
-                    <input type="checkbox" name="recursos[]" value="apuntes">
-                    Apuntes
-                </label>
-
-                <label>
-                    <input type="checkbox" name="recursos[]" value="videos">
-                    Videos
-                </label>
-
-                <label>
-                    <input type="checkbox" name="recursos[]" value="ejercicios">
-                    Ejercicios
-                </label>
-
-                <br><br>
-
-                <button type="submit">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    Buscar
-                </button>
-            </form>
-        </section>
-
-        <section>
-            <h2>Temas revisados</h2>
-
-            <table border="1">
-                <caption>Resumen de contenidos practicados</caption>
-
-                <thead>
-                    <tr>
-                        <th>Tema</th>
-                        <th>Etiqueta relacionada</th>
-                        <th>Uso</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    <tr>
-                        <td>Encabezados</td>
-                        <td><code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code></td>
-                        <td>Organizar títulos y subtítulos.</td>
-                    </tr>
-
-                    <tr>
-                        <td>Párrafos</td>
-                        <td><code>&lt;p&gt;</code></td>
-                        <td>Escribir bloques de texto.</td>
-                    </tr>
-
-                    <tr>
-                        <td>Enlaces</td>
-                        <td><code>&lt;a&gt;</code></td>
-                        <td>Conectar páginas internas o externas.</td>
-                    </tr>
-
-                    <tr>
-                        <td>Formularios</td>
-                        <td><code>&lt;form&gt;</code></td>
-                        <td>Enviar datos ingresados por el usuario.</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <section>
-            <h2>Avance de práctica</h2>
-
-            <p>HTML semántico:</p>
-            <progress value="90" max="100"></progress>
-            <span>90%</span>
-
-            <p>Formularios:</p>
-            <progress value="75" max="100"></progress>
-            <span>75%</span>
-
-            <p>Preparación para CSS:</p>
-            <meter value="5" min="0" max="10"></meter>
-        </section>
-
-        <section>
-            <h2>Notas para la siguiente clase</h2>
-
-            <details>
-                <summary>¿Por qué todavía no se usa CSS?</summary>
-                <p>
-                    Primero se está ordenando la estructura HTML. Después se aplicará CSS para
-                    mejorar colores, márgenes, tamaños, distribución y diseño visual.
-                </p>
-            </details>
-
-            <details>
-                <summary>¿Por qué se usan carpetas?</summary>
-                <p>
-                    Las carpetas permiten separar imágenes, audio, video y páginas internas.
-                    Esto ayuda a mantener el proyecto ordenado.
-                </p>
-            </details>
-        </section>
-
+                <section class="card mb-4">
+                    <div class="card-body">
+                        <h2>Notas para la siguiente clase</h2>
+                        <div class="accordion" id="accordionNotas">
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#nota1">¿Por qué todavía no se usa CSS?</button>
+                                </h3>
+                                <div id="nota1" class="accordion-collapse collapse show" data-bs-parent="#accordionNotas">
+                                    <div class="accordion-body">Primero se está ordenando la estructura HTML. Después se aplicará CSS para mejorar colores, márgenes, tamaños, distribución y diseño visual.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#nota2">¿Por qué se usan carpetas?</button>
+                                </h3>
+                                <div id="nota2" class="accordion-collapse collapse" data-bs-parent="#accordionNotas">
+                                    <div class="accordion-body">Las carpetas permiten separar imágenes, audio, video y páginas internas. Esto ayuda a mantener el proyecto ordenado.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Geovanny Brito Casanova.</p>
-        <p>Página de búsqueda para práctica de formularios HTML.</p>
+    <footer class="bg-dark text-white text-center py-4 mt-4">
+        <p class="mb-0">&copy; 2026 Geovanny Brito Casanova.</p>
+        <p class="mb-0">Página de búsqueda para práctica de formularios HTML.</p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

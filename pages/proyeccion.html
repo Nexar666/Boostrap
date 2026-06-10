@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Proyección en 10 Años</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        body {
+            background-color: rgb(169, 155, 155);
+            color: white;
+        }
+        .carousel-item img {
+            height: 400px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Barra de navegación -->
+    <ul class="nav nav-tabs justify-content-center bg-dark">
+        <li class="nav-item">
+            <a class="nav-link active" href="#inicio">Inicio</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#profesional">Vida Profesional</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#personal">Vida Personal</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#metas">Metas</a>
+        </li>
+    </ul>
+
+    <div class="container my-4">
+        <div class="text-center mb-4">
+            <button type="button" class="btn btn-outline-primary m-1">Primary</button>
+            <button type="button" class="btn btn-outline-secondary m-1">Secondary</button>
+            <button type="button" class="btn btn-outline-success m-1">Success</button>
+            <button type="button" class="btn btn-outline-danger m-1">Danger</button>
+            <button type="button" class="btn btn-outline-warning m-1">Warning</button>
+            <button type="button" class="btn btn-outline-info m-1">Info</button>
+            <button type="button" class="btn btn-outline-light m-1">Light</button>
+            <button type="button" class="btn btn-outline-dark m-1">Dark</button>
+        </div>
+        <hr>
+
+        <!-- Inicio -->
+        <div id="inicio" class="card bg-dark text-white mb-4">
+            <div class="card-body">
+                <h1 class="card-title">Mi Proyección en 10 Años</h1>
+                <p class="card-text">Dentro de diez años me imagino como una persona exitosa, responsable y comprometida con mis metas. Espero haber desarrollado mis habilidades y alcanzado muchos de mis objetivos.</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Vida profesional -->
+        <div id="profesional" class="card bg-dark text-white mb-4">
+            <div class="card-body">
+                <h2>Vida Profesional</h2>
+                <p>Me veo trabajando en una empresa reconocida o desarrollando mis propios proyectos. También espero seguir aprendiendo y creciendo profesionalmente.</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Vida personal -->
+        <div id="personal" class="card bg-dark text-white mb-4">
+            <div class="card-body">
+                <h2>Vida Personal</h2>
+                <p>Deseo mantener una vida equilibrada, compartiendo tiempo con mi familia, amigos y realizando actividades que disfrute.</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Carrusel -->
+        <div id="carouselExampleIndicators" class="carousel slide mb-4" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner rounded">
+                <div class="carousel-item active">
+                    <img src="../img/espe/imagenEjemploEspe.png" class="d-block w-100" alt="Imagen ESPE">
+                </div>
+                <div class="carousel-item">
+                    <img src="../img/espe/pap.jpg" class="d-block w-100" alt="Pap">
+                </div>
+                <div class="carousel-item">
+                    <img src="../img/espe/mem.jpg" class="d-block w-100" alt="Mem">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <hr>
+
+        <!-- Metas -->
+        <div id="metas" class="card bg-dark text-white mb-4">
+            <div class="card-body">
+                <h2>Metas y Objetivos</h2>
+                <ul class="list-group list-group-flush bg-dark text-white">
+                    <li class="list-group-item bg-dark text-white">Graduarme y especializarme en mi área de interés.</li>
+                    <li class="list-group-item bg-dark text-white">Conseguir estabilidad económica.</li>
+                    <li class="list-group-item bg-dark text-white">Viajar y conocer nuevos lugares.</li>
+                    <li class="list-group-item bg-dark text-white">Aprender nuevas habilidades.</li>
+                    <li class="list-group-item bg-dark text-white">Contribuir positivamente a la sociedad.</li>
+                </ul>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Conclusión -->
+        <div class="card bg-dark text-white mb-4">
+            <div class="card-body">
+                <h2>Conclusión</h2>
+                <p>Mi proyección en diez años está basada en el esfuerzo, la dedicación y el aprendizaje continuo. Espero alcanzar mis metas y seguir construyendo un futuro exitoso.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p class="mb-0">© 2036 - Mi Proyección Personal</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
