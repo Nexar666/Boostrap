@@ -3,351 +3,256 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Mi perfil profesional</title>
- 
-    <link rel="icon" href="img/mundito.ico" type="image/x-icon">
- 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
 
-    <link rel="stylesheet" href="css/general.css">
-    <link rel="stylesheet" href="css/index.css">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="css/custom.css">
 </head>
 
 <body>
- 
-    <header>
-        <h1>Mi perfil profesional</h1>
-        <p>Práctica de HTML semántico, formularios, multimedia y navegación entre páginas.</p>
+
+    <!-- ========== HEADER ========== -->
+    <header class="bg-dark text-white text-center py-4">
+        <h1 class="display-5">Mi perfil profesional</h1>
+        <p class="lead mb-0">Práctica de HTML semántico + Bootstrap 5</p>
     </header>
- 
-    <nav>
-        <a href="index.html" id="inicio" class="botonesnav">
-            <i class="fa-solid fa-house"></i>
-            Inicio
-        </a>
 
-        <a href="#objetivo" id="objetivo" class="botonesnav">Objetivo</a>
-
-        <a href="#intereses" id="intereses" class="botonesnav">Intereses</a>
-
-        <a href="#multimedia" id="multimedia" class="botonesRedireccion">Multimedia</a>
-
-        <a href="pages/buscar.html" class="botonesRedireccion">Buscar</a>
-
-        <a href="pages/portafolio.html" class="botonesnav">Portafolio</a>
-
-        <a href="pages/cto/contacto.html" class="botonesRedireccion">
-            <i class="fa-solid fa-envelope"></i>
-            Contacto
-        </a>
+    <!-- ========== NAVBAR BOOTSTRAP ========== -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary ">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fa-solid fa-user-graduate"></i> N. Riofrio
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#objetivo">Objetivo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#intereses">Intereses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#multimedia">Multimedia</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/buscar.html">Buscar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/portafolio.html">Portafolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/cto/contacto.html">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/proyeccion.html">Proyección</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
- 
-    <aside>
-        <h2>Dato adicional</h2>
-        <p>
-            HTML semántico ayuda a organizar mejor el contenido de una página web.
-            Luego se podrá mejorar la presentación visual usando CSS.
-        </p>
 
-        <p>Ejemplos de íconos:</p>
-        <i class="fa-solid fa-user"></i>
-        <i class="fa-solid fa-envelope"></i>
-        <i class="fa-solid fa-phone"></i>
-        <i class="fa-brands fa-facebook"></i>
-        <i class="fa-brands fa-instagram"></i>
-    </aside>
- 
-    <main>
- 
-        <section id="presentacion">
-            <h2>Sobre mí</h2>
+    <main class="container my-4">
 
-            <p>
-                Mi nombre es Geovanny Brito Casanova. Estoy aprendiendo a crear páginas web
-                usando HTML de manera ordenada.
-            </p>
+        <!-- ========== ASIDE (semántico) con alerta ========== -->
+        <aside class="alert alert-info alert-dismissible fade show mb-4" role="alert">
+            <i class="fa-solid fa-lightbulb"></i>
+            <strong>Dato adicional:</strong> HTML semántico ayuda a organizar mejor el contenido. ¡Esta página usa Bootstrap 5!
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </aside>
 
-            <p>
-                En esta página se practican etiquetas semánticas, enlaces, listas, tablas,
-                formularios, imágenes, audio, video e inserción de contenido externo.
-            </p>
+        <!-- ========== SECCIÓN SOBRE MÍ ========== -->
+        <section id="presentacion" class="mb-5">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="mb-3">Sobre mí</h2>
+                    <p class="lead">Mi nombre es <strong>Nexar Riofrio Medranda</strong>. Estoy aprendiendo a crear páginas web usando HTML y Bootstrap 5.</p>
+                    <p>En esta página se practican etiquetas semánticas, enlaces, listas, tablas, formularios, imágenes, audio, video y componentes de Bootstrap.</p>
+                    <span class="badge bg-success">En aprendizaje</span>
+                    <span class="badge bg-warning text-dark">Bootstrap 5</span>
+                </div>
+            </div>
         </section>
- 
-        <section id="objetivo">
-            <h2>Objetivo de aprendizaje</h2>
 
-            <p>
-                Crear una página web básica con estructura clara, rutas relativas y contenido
-                organizado antes de comenzar con CSS.
-            </p>
-
-            <p>
-                Ejemplo de formatos básicos:
-                <b>texto en negrita</b>,
-                <i>texto en cursiva</i>,
-                <u>texto subrayado</u>,
-                <strong>texto importante</strong> y
-                <em>texto enfatizado</em>.
-            </p>
+        <!-- ========== SECCIÓN OBJETIVO ========== -->
+        <section id="objetivo" class="mb-5">
+            <div class="card shadow-sm">
+                <div class="card-header bg-success text-white">
+                    <h2 class="h4 mb-0"><i class="fa-solid fa-bullseye"></i> Objetivo de aprendizaje</h2>
+                </div>
+                <div class="card-body">
+                    <p>Crear una página web básica con estructura clara, rutas relativas y contenido organizado utilizando Bootstrap 5.</p>
+                    <p>Ejemplo de formatos básicos:
+                        <span class="badge bg-secondary">negrita</span>
+                        <span class="badge bg-info">cursiva</span>
+                        <span class="badge bg-dark">subrayado</span>
+                    </p>
+                </div>
+            </div>
         </section>
- 
-        <section id="intereses">
-            <h2>Mis intereses</h2>
 
-            <ul>
-                <li>Diseño web</li>
-                <li>Programación</li>
-                <li>Tecnología</li>
-                <li>Desarrollo de aplicaciones</li>
-            </ul>
+        <!-- ========== INTERESES + PASOS (dos columnas) ========== -->
+        <div class="row mb-5">
+            <div class="col-md-6">
+                <section id="intereses" class="card h-100 shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h2 class="h4 mb-0"><i class="fa-solid fa-heart"></i> Mis intereses</h2>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">🎨 Diseño web</li>
+                        <li class="list-group-item">💻 Programación</li>
+                        <li class="list-group-item">🚀 Tecnología</li>
+                        <li class="list-group-item">📱 Desarrollo de aplicaciones</li>
+                    </ul>
+                </section>
+            </div>
+
+            <div class="col-md-6">
+                <section id="pasos" class="card h-100 shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h2 class="h4 mb-0"><i class="fa-solid fa-stairs"></i> Pasos para estudiar HTML</h2>
+                    </div>
+                    <ol class="list-group list-group-numbered list-group-flush">
+                        <li class="list-group-item">Abrir el editor de código</li>
+                        <li class="list-group-item">Crear la carpeta del proyecto</li>
+                        <li class="list-group-item">Crear los archivos HTML</li>
+                        <li class="list-group-item">Escribir etiquetas HTML correctamente</li>
+                        <li class="list-group-item">Guardar cambios y abrir en navegador</li>
+                    </ol>
+                </section>
+            </div>
+        </div>
+
+        <!-- ========== INSTITUCIÓN + MULTIMEDIA ========== -->
+        <section class="mb-5">
+            <div class="row">
+                <div class="col-md-5">
+                    <figure class="text-center">
+                        <img src="img/espe/imagenEjemploEspe.png" alt="ESPE" class="img-fluid rounded shadow">
+                        <figcaption class="mt-2 text-muted">Universidad de las Fuerzas Armadas ESPE</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-7">
+                    <div id="multimedia" class="bg-light p-3 rounded">
+                        <h3><i class="fa-solid fa-video"></i> Contenido multimedia</h3>
+                        <video src="video/videoEjemploDiagnostica.mp4" controls class="img-fluid rounded mb-3" poster="img/espe/imagenEjemploEspe.png">
+                            Tu navegador no soporta video.
+                        </video>
+                        <audio src="audio/audioEjemploA7X.mp3" controls class="w-100">
+                            Tu navegador no soporta audio.
+                        </audio>
+                    </div>
+                </div>
+            </div>
         </section>
- 
-        <section id="pasos">
-            <h2>Pasos para estudiar HTML</h2>
 
-            <ol>
-                <li>Abrir el editor de código.</li>
-                <li>Crear la carpeta del proyecto.</li>
-                <li>Crear los archivos HTML.</li>
-                <li>Escribir etiquetas HTML correctamente.</li>
-                <li>Guardar los cambios.</li>
-                <li>Abrir la página en el navegador.</li>
-            </ol>
+        <!-- ========== VIDEO EXTERNO IFRAME ========== -->
+        <section class="mb-5">
+            <div class="card">
+                <div class="card-header bg-dark text-white">
+                    <h3 class="h5 mb-0"><i class="fa-brands fa-youtube"></i> Video externo con iframe</h3>
+                </div>
+                <div class="card-body text-center">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/bdz90srbneU?si=QoyqD5uKp2PkH5kk" title="YouTube" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
         </section>
- 
-        <section>
-            <h2>Institución de referencia</h2>
 
-            <figure>
-                <img src="img/espe/imagenEjemploEspe.png" alt="Logo de la ESPE" width="300">
-                <figcaption>Universidad de las Fuerzas Armadas ESPE.</figcaption>
-            </figure>
+        <!-- ========== TABLA HORARIO ========== -->
+        <section class="mb-5">
+            <h2 class="border-bottom pb-2">Horario de estudio</h2>
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped">
+                    <caption class="fw-bold">Plan semanal de práctica HTML</caption>
+                    <thead class="table-success">
+                        <tr><th>Día</th><th>Actividad</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Lunes</td><td>Práctica de estructura HTML</td></tr>
+                        <tr><td>Martes</td><td>Revisión de etiquetas semánticas</td></tr>
+                        <tr><td>Miércoles</td><td>Práctica de listas, tablas e imágenes</td></tr>
+                        <tr><td>Jueves</td><td>Práctica de formularios</td></tr>
+                        <tr><td>Viernes</td><td>Entrega de la práctica</td></tr>
+                    </tbody>
+                </table>
+            </div>
         </section>
- 
-        <section id="multimedia">
-            <h2>Contenido multimedia</h2>
 
-            <article>
-                <h3>Video local</h3>
+        <!-- ========== FORMULARIOS + PROGRESS + DETAILS ========== -->
+        <div class="row">
+            <div class="col-md-6">
+                <section class="card mb-4">
+                    <div class="card-header bg-warning">
+                        <h2 class="h5 mb-0">Formulario de búsqueda</h2>
+                    </div>
+                    <div class="card-body">
+                        <form method="GET" action="pages/buscar.html">
+                            <div class="mb-3">
+                                <label for="tema" class="form-label">Tema:</label>
+                                <input type="text" id="tema" name="tema" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="correo" class="form-label">Correo:</label>
+                                <input type="email" id="correo" name="correo" class="form-control" required>
+                            </div>
+                            <p>Temas de interés:</p>
+                            <div class="form-check">
+                                <input type="checkbox" name="temas[]" value="html" class="form-check-input">
+                                <label class="form-check-label">HTML</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" name="temas[]" value="css" class="form-check-input">
+                                <label class="form-check-label">CSS</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" name="temas[]" value="javascript" class="form-check-input">
+                                <label class="form-check-label">JavaScript</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary mt-3"><i class="fa-solid fa-search"></i> Buscar</button>
+                        </form>
+                    </div>
+                </section>
+            </div>
 
-                <video src="video/videoEjemploDiagnostica.mp4" controls width="400"
-                    poster="img/espe/imagenEjemploEspe.png" muted loop>
-                    Tu navegador no soporta la etiqueta de video.
-                </video>
-            </article>
+            <div class="col-md-6">
+                <section class="card mb-4">
+                    <div class="card-header bg-info text-white">
+                        <h2 class="h5 mb-0">Avance del curso</h2>
+                    </div>
+                    <div class="card-body">
+                        <label class="form-label">HTML básico:</label>
+                        <progress value="80" max="100" class="w-100 mb-3"></progress>
+                        <label class="form-label">Formularios:</label>
+                        <progress value="60" max="100" class="w-100 mb-3"></progress>
+                        <label class="form-label">Nivel de aprendizaje:</label>
+                        <meter value="8" min="0" max="10" class="w-100"></meter>
+                    </div>
+                </section>
 
-            <article>
-                <h3>Audio local</h3>
-
-                <audio src="audio/audioEjemploA7X.mp3" controls loop preload="metadata">
-                    Tu navegador no soporta la etiqueta de audio.
-                </audio>
-            </article>
-
-            <article>
-                <h3>Video externo con iframe</h3>
-
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/bdz90srbneU?si=QoyqD5uKp2PkH5kk"
-                    title="Video de YouTube" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-                </iframe>
-            </article>
-        </section>
- 
-        <section class="nota">
-            <h2>Publicaciones</h2>
-
-            <article>
-                <h3>¿Por qué aprender HTML?</h3>
-                <p>
-                    HTML permite crear la estructura de una página web de forma ordenada.
-                </p>
-            </article>
-
-            <article>
-                <h3>Importancia de la semántica</h3>
-                <p>
-                    Las etiquetas semánticas ayudan a que el contenido sea más comprensible
-                    para personas, navegadores y motores de búsqueda.
-                </p>
-            </article>
-        </section>
- 
-        <section class="nota">
-            <h2>Horario de estudio</h2>
-
-            <table border="1">
-                <caption>Plan semanal de práctica HTML</caption>
-
-                <thead>
-                    <tr>
-                        <th>Día</th>
-                        <th>Actividad</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    <tr>
-                        <td>Lunes</td>
-                        <td>Práctica de estructura HTML.</td>
-                    </tr>
-
-                    <tr>
-                        <td>Martes</td>
-                        <td>Revisión de etiquetas semánticas.</td>
-                    </tr>
-
-                    <tr>
-                        <td>Miércoles</td>
-                        <td>Práctica de listas, tablas e imágenes.</td>
-                    </tr>
-
-                    <tr>
-                        <td>Jueves</td>
-                        <td>Práctica de formularios.</td>
-                    </tr>
-
-                    <tr>
-                        <td>Viernes</td>
-                        <td>Entrega de la práctica.</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
- 
-        <section>
-            <h2>Formulario de búsqueda</h2>
- 
-            <form method="GET" action="pages/buscar.html">
-
-                <label for="tema">Tema:</label>
-                <input type="text" id="tema" name="tema" placeholder="Escriba un tema" required minlength="3"
-                    maxlength="20">
-
-                <br><br>
-
-                <label for="correo">Correo:</label>
-                <input type="email" id="correo" name="correo" placeholder="Escriba su correo" required>
-
-                <br><br>
-
-                <p>Seleccione los temas de interés:</p>
-
-                <label>
-                    <input type="checkbox" name="temas[]" value="html">
-                    HTML
-                </label>
-
-                <label>
-                    <input type="checkbox" name="temas[]" value="css">
-                    CSS
-                </label>
-
-                <label>
-                    <input type="checkbox" name="temas[]" value="javascript">
-                    JavaScript
-                </label>
-
-                <br><br>
-
-                <button type="submit">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    Buscar
-                </button>
-            </form>
-        </section>
- 
-        <section>
-            <h2>Registro de horario</h2>
-
-            <form method="GET" action="pages/buscar.html">
-
-                <label for="asignatura">Asignatura:</label>
-                <select id="asignatura" name="asignatura" required>
-                    <option value="">Seleccione una asignatura</option>
-                    <option value="programacion">Programación</option>
-                    <option value="base_datos">Base de Datos</option>
-                    <option value="redes">Redes</option>
-                    <option value="sistemas_operativos">Sistemas Operativos</option>
-                </select>
-
-                <br><br>
-
-                <label for="hora">Hora:</label>
-                <input type="time" id="hora" name="hora" min="08:00" max="17:00" step="1800" required>
-
-                <br><br>
-
-                <button type="submit">Enviar horario</button>
-            </form>
-        </section>
- 
-        <section>
-            <h2>Avance del curso</h2>
-
-            <label for="avance-html">HTML básico:</label>
-            <progress id="avance-html" value="80" max="100"></progress>
-            <span>80%</span>
-
-            <p>Formularios:</p>
-            <progress value="60" max="100"></progress>
-            <span>60%</span>
-
-            <p>Nivel de aprendizaje en HTML:</p>
-            <meter value="8" min="0" max="10"></meter>
-        </section>
- 
-        <section>
-            <h2>Preguntas frecuentes</h2>
-
-            <details>
-                <summary>¿Qué es HTML?</summary>
-                <p>HTML es el lenguaje que permite crear la estructura de una página web.</p>
-            </details>
-
-            <details>
-                <summary>¿Para qué sirve una etiqueta?</summary>
-                <p>Una etiqueta indica al navegador cómo debe interpretar una parte del contenido.</p>
-            </details>
-        </section>
- 
-        <section>
-            <h2>Texto técnico en HTML</h2>
-
-            <p>
-                Para guardar un archivo se puede usar el atajo:
-                <kbd>Ctrl</kbd> + <kbd>S</kbd>.
-            </p>
-
-            <p>
-                Una etiqueta se puede mostrar como texto usando entidades:
-                <code>&lt;h1&gt;Título principal&lt;/h1&gt;</code>
-            </p>
-
-            <p>
-                Ejemplo de entidad HTML:
-                &copy; representa derechos de autor.
-            </p>
-
-            <p>
-                Última actualización:
-                <time datetime="2026-05-28">28 de mayo de 2026</time>.
-            </p>
-        </section>
+                <section class="card">
+                    <div class="card-header bg-secondary text-white">
+                        <h2 class="h5 mb-0">Preguntas frecuentes</h2>
+                    </div>
+                    <div class="card-body">
+                        <details class="mb-3">
+                            <summary class="fw-bold">¿Qué es HTML?</summary>
+                            <p class="mt-2 mb-0">HTML es el lenguaje que permite crear la estructura de una página web.</p>
+                        </details>
+                        <details>
+                            <summary class="fw-bold">¿Para qué sirve una etiqueta?</summary>
+                            <p class="mt-2 mb-0">Indica al navegador cómo interpretar el contenido.</p>
+                        </details>
+                    </div>
+                </section>
+            </div>
+        </div>
 
     </main>
- 
-    <footer>
-        <p>&copy; 2026 Geovanny Brito Casanova.</p>
-        <p>Clase de Fundamentos Web - HTML Semántico.</p>
 
-        <address>
-            Ecuador<br>
-            Contacto académico: curso@ejemplo.com
-        </address>
+    <!-- ========== FOOTER ========== -->
+    <footer class="bg-dark text-white text-center py-4 mt-4">
+        <p class="mb-1">&copy; 2026 Nexar Riofrio.</p>
+        <p class="mb-1">Clase de Fundamentos Web - HTML Semántico + Bootstrap 5</p>
+        <address class="mb-0">Ecuador · contacto@ejemplo.com</address>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

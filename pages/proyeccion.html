@@ -4,144 +4,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Proyección en 10 Años</title>
-    
-    <!-- Bootstrap CSS -->
+    <title>Mi Proyección · Nexar Riofrio </title>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <style>
-        body {
-            background-color: rgb(169, 155, 155);
-            color: white;
-        }
-        .carousel-item img {
-            height: 400px;
-            object-fit: cover;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/custom.css">
 </head>
 
 <body>
 
-    <!-- Barra de navegación -->
-    <ul class="nav nav-tabs justify-content-center bg-dark">
-        <li class="nav-item">
-            <a class="nav-link active" href="#inicio">Inicio</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#profesional">Vida Profesional</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#personal">Vida Personal</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#metas">Metas</a>
-        </li>
-    </ul>
+    <header class="bg-dark text-white text-center py-5">
+        <h1 class="display-5">Mi Proyección en 10 Años</h1>
+        <p class="lead">Metas · Sueños · Plan de vida</p>
+    </header>
 
-    <div class="container my-4">
-        <div class="text-center mb-4">
-            <button type="button" class="btn btn-outline-primary m-1">Primary</button>
-            <button type="button" class="btn btn-outline-secondary m-1">Secondary</button>
-            <button type="button" class="btn btn-outline-success m-1">Success</button>
-            <button type="button" class="btn btn-outline-danger m-1">Danger</button>
-            <button type="button" class="btn btn-outline-warning m-1">Warning</button>
-            <button type="button" class="btn btn-outline-info m-1">Info</button>
-            <button type="button" class="btn btn-outline-light m-1">Light</button>
-            <button type="button" class="btn btn-outline-dark m-1">Dark</button>
-        </div>
-        <hr>
-
-        <!-- Inicio -->
-        <div id="inicio" class="card bg-dark text-white mb-4">
-            <div class="card-body">
-                <h1 class="card-title">Mi Proyección en 10 Años</h1>
-                <p class="card-text">Dentro de diez años me imagino como una persona exitosa, responsable y comprometida con mis metas. Espero haber desarrollado mis habilidades y alcanzado muchos de mis objetivos.</p>
-            </div>
-        </div>
-
-        <hr>
-
-        <!-- Vida profesional -->
-        <div id="profesional" class="card bg-dark text-white mb-4">
-            <div class="card-body">
-                <h2>Vida Profesional</h2>
-                <p>Me veo trabajando en una empresa reconocida o desarrollando mis propios proyectos. También espero seguir aprendiendo y creciendo profesionalmente.</p>
-            </div>
-        </div>
-
-        <hr>
-
-        <!-- Vida personal -->
-        <div id="personal" class="card bg-dark text-white mb-4">
-            <div class="card-body">
-                <h2>Vida Personal</h2>
-                <p>Deseo mantener una vida equilibrada, compartiendo tiempo con mi familia, amigos y realizando actividades que disfrute.</p>
-            </div>
-        </div>
-
-        <hr>
-
-        <!-- Carrusel -->
-        <div id="carouselExampleIndicators" class="carousel slide mb-4" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner rounded">
-                <div class="carousel-item active">
-                    <img src="../img/espe/imagenEjemploEspe.png" class="d-block w-100" alt="Imagen ESPE">
-                </div>
-                <div class="carousel-item">
-                    <img src="../img/espe/pap.jpg" class="d-block w-100" alt="Pap">
-                </div>
-                <div class="carousel-item">
-                    <img src="../img/espe/mem.jpg" class="d-block w-100" alt="Mem">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <i class="fa-solid fa-chart-line"></i> N. Riofrio
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navProyeccion">
+                <span class="navbar-toggler-icon"></span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-
-        <hr>
-
-        <!-- Metas -->
-        <div id="metas" class="card bg-dark text-white mb-4">
-            <div class="card-body">
-                <h2>Metas y Objetivos</h2>
-                <ul class="list-group list-group-flush bg-dark text-white">
-                    <li class="list-group-item bg-dark text-white">Graduarme y especializarme en mi área de interés.</li>
-                    <li class="list-group-item bg-dark text-white">Conseguir estabilidad económica.</li>
-                    <li class="list-group-item bg-dark text-white">Viajar y conocer nuevos lugares.</li>
-                    <li class="list-group-item bg-dark text-white">Aprender nuevas habilidades.</li>
-                    <li class="list-group-item bg-dark text-white">Contribuir positivamente a la sociedad.</li>
+            <div class="collapse navbar-collapse" id="navProyeccion">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="buscar.html">Buscar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="portafolio.html">Portafolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cto/contacto.html">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="proyeccion.html">Proyección</a></li>
                 </ul>
             </div>
         </div>
+    </nav>
 
-        <hr>
+    <main class="container my-4">
 
-        <!-- Conclusión -->
-        <div class="card bg-dark text-white mb-4">
-            <div class="card-body">
-                <h2>Conclusión</h2>
-                <p>Mi proyección en diez años está basada en el esfuerzo, la dedicación y el aprendizaje continuo. Espero alcanzar mis metas y seguir construyendo un futuro exitoso.</p>
-            </div>
+        <!-- Bienvenida con Badges -->
+        <div class="alert alert-success text-center">
+            <strong><i class="fa-solid fa-rocket"></i> ¡Hacia el futuro!</strong> Esto es lo que quiero lograr en los próximos años.
+            <span class="badge bg-primary">Metas</span>
+            <span class="badge bg-warning text-dark">Sueños</span>
         </div>
-    </div>
 
-    <footer class="bg-dark text-white text-center py-3">
-        <p class="mb-0">© 2036 - Mi Proyección Personal</p>
+        <!-- Sección profesional con Cards simples -->
+        <section class="mb-5">
+            <h2 class="border-bottom pb-2 mb-4">Mi visión profesional</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fa-solid fa-code fa-3x text-primary mb-3"></i>
+                            <h5 class="card-title">Full Stack Developer</h5>
+                            <p class="card-text">Dominar frontend y backend para crear aplicaciones completas.</p>
+                            <span class="badge bg-secondary">Meta 2028</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fa-solid fa-cloud fa-3x text-info mb-3"></i>
+                            <h5 class="card-title">Cloud Specialist</h5>
+                            <p class="card-text">Certificarme en AWS y ayudar a empresas a migrar a la nube.</p>
+                            <span class="badge bg-secondary">Meta 2030</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fa-solid fa-chalkboard-user fa-3x text-success mb-3"></i>
+                            <h5 class="card-title">Docente universitario</h5>
+                            <p class="card-text">Compartir mis conocimientos con nuevas generaciones.</p>
+                            <span class="badge bg-secondary">Sueño</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Progreso de habilidades -->
+        <section class="mb-5">
+            <h2 class="border-bottom pb-2 mb-4">Habilidades a desarrollar</h2>
+            <div class="card p-3">
+                <label class="form-label">JavaScript</label>
+                <progress value="50" max="100" class="w-100 mb-3"></progress>
+                <label class="form-label">React / Vue</label>
+                <progress value="30" max="100" class="w-100 mb-3"></progress>
+                <label class="form-label">Node.js / Python</label>
+                <progress value="40" max="100" class="w-100 mb-3"></progress>
+                <label class="form-label">Bases de datos</label>
+                <progress value="55" max="100" class="w-100"></progress>
+            </div>
+        </section>
+
+        <!-- Metas con List Group -->
+        <section class="mb-5">
+            <h2 class="border-bottom pb-2 mb-4">Metas escalonadas</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="list-group">
+                        <div class="list-group-item list-group-item-success">
+                            <strong>Corto plazo (1-2 años)</strong>
+                        </div>
+                        <div class="list-group-item">Terminar curso JavaScript</div>
+                        <div class="list-group-item">Crear 3 proyectos de portafolio</div>
+                        <div class="list-group-item"> Obtener certificación básica</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="list-group">
+                        <div class="list-group-item list-group-item-warning">
+                            <strong>Mediano plazo (3-5 años)</strong>
+                        </div>
+                        <div class="list-group-item">Graduarme </div>
+                        <div class="list-group-item"> Primer empleo en tecnología</div>
+                        <div class="list-group-item">Participar en eventos tech</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="list-group">
+                        <div class="list-group-item list-group-item-danger">
+                            <strong>Largo plazo (6-10 años)</strong>
+                        </div>
+                        <div class="list-group-item"> Liderar equipos de desarrollo</div>
+                        <div class="list-group-item"> Crear mi propia empresa</div>
+                        <div class="list-group-item"> Dar clases universitarias</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Carrusel simple de imágenes -->
+        <section class="mb-5">
+            <h2 class="border-bottom pb-2 mb-4">Mi inspiración</h2>
+            <div id="caruselSimple" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner rounded shadow">
+                    <div class="carousel-item active">
+                        <img src="https://placehold.co/1200x400/2c3e66/white?text=Trabajo+en+equipo" class="d-block w-100" alt="Equipo">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://placehold.co/1200x400/e67e22/white?text=Innovación+tecnológica" class="d-block w-100" alt="Innovación">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://placehold.co/1200x400/27ae60/white?text=Educación+y+crecimiento" class="d-block w-100" alt="Educación">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#caruselSimple" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#caruselSimple" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-dark text-white text-center py-4 mt-4">
+        <p>&copy; 2026 Nexar Riofrio · Mi proyección en 10 años</p>
+        <p><small>Construido con Bootstrap 5 · Mobile First</small></p>
     </footer>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
